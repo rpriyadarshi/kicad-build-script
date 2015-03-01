@@ -1,5 +1,7 @@
 #!/bin/bash
 
+BZR_WHOAMI="Rohit Priyadarshi <rohit@rishkan.com>"
+
 KICAD_SRC_DIR=kicad
 KICAD_SRC_DOC_DIR=kicad-doc
 KICAD_SRC_LIBRARY_DIR=kicad-library
@@ -68,7 +70,7 @@ function get_brew {
 }
 
 function get_src {
-	bzr whoami "Rohit Priyadarshi <rohit@rishkan.com>"
+	bzr whoami $BZR_WHOAMI
 
 	# Get KiCad sources
 	bzr branch lp:$KICAD_SRC_DIR
